@@ -333,3 +333,67 @@ nav a[href]:hover::after {
 .close line:last-child {
   transform: rotate(-135deg);
 }
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+/* .panel .left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 1rem;
+  text-align: left;
+} */
+
+.space {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 601px) {
+  .panel {
+    flex-direction: row;
+  }
+
+  .panel .text-wrapper {
+    flex: 1 1 50%;
+  }
+
+  .panel .image-wrapper {
+    flex: 1 1 50%;
+  }
+
+  .panel h2 {
+    margin-top: 0;
+  }
+
+  .panel .left {
+    order: -1;
+    /* justify-content: space-around; */
+  }
+}
+
+@media (min-width: 901px) {
+  .hero {
+    height: 80vh;
+  }
+  .hero img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .panel .text-wrapper {
+    flex: 1 1 50%;
+  }
+
+  .panel .image-wrapper {
+    flex: 1 1 50%;
+  }
+
+  .panel .left {
+    order: -1;
+  }
+}
