@@ -240,6 +240,10 @@ a[href]:hover {
   position: absolute;
 }
 
+.icons {
+  justify-content: center;
+}
+
 @media (min-width: 401px) {
   /* tablet CSS */
 }
