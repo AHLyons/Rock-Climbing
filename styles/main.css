@@ -261,6 +261,7 @@ a[href]:hover {
 nav {
   display: none;
   padding: 2rem 1.5rem 1rem;
+  font-size: xx-large;
 }
 
 nav ul {
@@ -447,6 +448,7 @@ nav a:not([href]) {
 .black {
   background-color: black;
   color: #eccc68;
+  font-size: xx-large;
 }
 
 section {
