@@ -451,6 +451,10 @@ nav a:not([href]) {
   font-size: xx-large;
 }
 
+.glitch {
+  z-index: -1;
+}
+
 section {
   display: flex;
   /* width: 100vw;
