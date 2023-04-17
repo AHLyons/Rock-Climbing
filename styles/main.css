@@ -352,6 +352,105 @@ nav a:not([href]) {
   color: var(--color-kinda-primary);
 }
 
+/* Code for the contact page */
+.sky {
+  background-image: url(../images/mountain.jpg);
+  color: var(--color-secondary);
+}
+
+input[type="submit"] {
+  justify-self: center;
+  margin: 2rem 0 6rem;
+  border: 2px solid var(--color-secondary);
+  border-radius: 3px;
+  background-color: var(--color-primary);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.75rem 1rem;
+  transition: background-color 300ms ease;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color-kinda-primary);
+  border-color: var(--color-accent-light);
+  box-shadow: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  opacity: 0;
+  height: 0;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: grid;
+  grid-template-columns: var(--checkbox-size) max-content;
+  grid-column-gap: 12px;
+}
+
+input[type="radio"] + label::before,
+input[type="radio"] + label::after,
+input[type="checkbox"] + label::before,
+input[type="checkbox"] + label::after {
+  content: "";
+  display: block;
+  /* height: var(--checkbox-size);
+  width: var(--checkbox-size); */
+  border: 2px solid var(--color-secondary);
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  align-self: center;
+  justify-self: center;
+}
+
+input[type="checkbox"] + label::before {
+  background-color: var(--color-primary);
+  border-radius: 3px;
+}
+
+input[type="radio"] + label::before {
+  border-radius: 50%;
+}
+
+input[type="radio"] + label:hover::before,
+input[type="checkbox"] + label:hover::before {
+  box-shadow: 0px 0px 3px 3px black;
+}
+
+input[type="checkbox"] + label::after {
+  /* base check dimensions on checkbox size */
+  /* width: calc(var(--checkbox-size) / 3);
+  height: calc(var(--checkbox-size) / 1.5); */
+  border-color: var(--background-color);
+  border-width: 3px;
+  border-left: none;
+  border-top: none;
+  margin-bottom: 4px;
+  transform: rotate(40deg);
+  transition: opacity 300ms ease;
+  opacity: 0;
+}
+
+input[type="radio"] + label::after {
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+
+  /* width: calc(var(--checkbox-size) - 8px);
+  height: calc(var(--checkbox-size) - 8px); */
+  transform: scale(0);
+  transition: transform 200ms ease;
+}
+
+input[type="checkbox"]:checked + label::after {
+  opacity: 1;
+}
+
+input[type="radio"]:checked + label::after {
+  transform: scale(1);
+}
+
 @media (min-width: 401px) {
   .cards {
     flex-direction: row;
